@@ -1,0 +1,1117 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+  font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  margin: 200px auto;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  z-index: 9999;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/*------------ header------------------------ */
+
+
+header {
+  margin: 0 auto;
+  background: rgb(255, 153, 1);
+  /* width: 100vw;
+  height: 100vh; */
+  align-items: center;
+}
+
+
+.top h1 {
+  font-size: 1.6em;
+  line-height: 3em;
+  width: 100%;
+}
+
+.top p {
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
+}
+
+
+.box {
+  width: 800px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: lighten(#f0f4c3, 10%);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.hp_layer {
+  margin: 0;
+}
+
+.hp_layer h1 {
+  font-size: 2em;
+  height: 400px;
+}
+
+.top_text {
+  background: url(../img/mainbg.png);
+  background-size: cover;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.wave_title {
+  margin: 5px;
+  font-size: 1.4em;
+  color: #fff;
+
+}
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: #0af;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: yellow;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 300px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 24px;
+  text-shadow: 0 1px 0 rgba(black, .1);
+  text-indent: .3em;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ---------------🍔menu--------------------------- */
+
+.sp_menu {
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sp_menu #open {
+  font-size: 2.5em;
+  cursor: pointer;
+  line-height: 1.5em;
+  padding: 0.1em;
+}
+
+.sp_menu #open.hide {
+  display: none;
+}
+
+
+
+/* -------------overlay 🍔------------------ */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 40%;
+  right: 0;
+  left: 50%;
+  background: rgb(238, 255, 2);
+  text-align: center;
+  padding: 6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 0.3em;
+  right: 0.1em;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style: none;
+}
+
+.overlay li {
+
+  opacity: 0;
+  transform: translateY(2em);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+
+.overlay.show li:nth-child(5) {
+  transition-delay: .5s;
+}
+
+
+/* ---------scroll top---------------------------------- */
+
+
+
+
+/*--------- main-------------------------------- */
+
+
+.pc_menu {
+  display: none;
+}
+
+/* fade-in--------------------------------- */
+
+.fade_in {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+}
+
+.fade_in_up {
+  transform: translate(0, 50px);
+}
+
+.fade_in_left {
+  transform: translate(-50px, 0);
+}
+
+.fade_in_right {
+  transform: translate(50px, 0);
+}
+
+.scroll_in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
+/* ----------------about----------------------------- */
+
+.about {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  /* それぞれのsectionを真ん中に */
+}
+
+.about_pic {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  /*   transform-style: flat; */
+  transition: transform 1s;
+}
+
+.item {
+  transition: transform 1s;
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 5em;
+  text-align: center;
+  color: #FFF;
+  /*   opacity: 0.95; */
+  border-radius: 10px;
+  transform: translateZ(0px);
+  /*   z-index: -1 */
+}
+
+.fade_in {
+  width: 100%;
+}
+
+
+.about_info {
+  display: block;
+  height: 260px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about_info_title {
+  background: hsl(39, 100%, 68%, 0.8);
+  margin-top: 140px;
+}
+
+.about_pic {
+  margin: 0 auto;
+  width: 200px;
+  height: 160px;
+  perspective: 1000px;
+  margin-top: 80px;
+
+}
+
+.about_info_text {
+  text-align: center;
+  width: 100%;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.about_info_text p {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.about_pic_list {
+  height: auto;
+  width: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  display: block;
+}
+
+#item_a {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 200px;
+  height: 150px;
+  line-height: 200px;
+  list-style: none;
+  font-size: 5em;
+  text-align: center;
+  color: #fff;
+  opacity: 0.95;
+  border-radius: 0.2em;
+
+  transform: rotateY(0deg) translateZ(250px);
+  background: #ed1c24;
+}
+
+#item_b {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 200px;
+  height: 150px;
+  list-style: none;
+  font-size: 5em;
+  text-align: center;
+  color: #ffff;
+  opacity: 0.95;
+  border-radius: 0.2em;
+
+  transform: rotateY(60deg) translateZ(250px);
+  background: blue;
+}
+
+#item_c {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 200px;
+  height: 150px;
+  list-style: none;
+  font-size: 5em;
+  text-align: center;
+  color: #fff;
+  opacity: 0.95;
+  border-radius: 0.2em;
+
+  transform: rotateY(180deg) translateZ(250px);
+  background: coral;
+}
+
+#item_d {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 200px;
+  height: 150px;
+  list-style: none;
+  font-size: 5em;
+  text-align: center;
+  color: #fff;
+  opacity: 0.95;
+  border-radius: 0.2em;
+
+  transform: rotateY(300deg) translateZ(250px);
+  background: yellowgreen;
+}
+
+
+.top_text {
+  margin-bottom: 3em;
+}
+
+
+/* ----------course----------------------- */
+
+.course>h1 {
+  background: hsl(39, 100%, 68%, 0.8);
+}
+
+section .course {
+  margin: 0 auto;
+}
+
+.course_text {
+  font-size: 14px;
+  margin: 50px;
+}
+
+
+.course_container {
+  width: 90%;
+  height: 150px;
+}
+
+.course_info h1 {
+  margin: 5px auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.course_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.course_pic img {
+  width: 200px;
+  object-fit: contain;
+
+}
+
+.course_info {
+  text-align: center;
+  font-size: 16px;
+  width: 50%;
+}
+
+.course_info_text h2 {
+  font-size: 18px;
+}
+
+.course_info p {
+
+  font-size: 14px;
+  text-align: center;
+}
+
+.course_page {
+  margin-bottom: 100px;
+}
+
+/* -----------news------------------------------- */
+.news_title {
+  background: hsl(39, 100%, 68%, 0.8);
+}
+
+.news_info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.news_pic {
+  width: 60%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.news_pic img {
+  width: 90%;
+  border-radius: 16px;
+  box-shadow: 0 8px 8px 0 darkgray;
+}
+
+.news_info_list {
+  width: 40%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.btn {
+  margin: 20px auto;
+  padding: 5px 10px;
+  display: block;
+  box-shadow: 0 4px 4px 0 darkgray;
+}
+
+.hidden {
+  display: none;
+}
+
+.app {
+  background: rgb(255, 153, 1);
+  height: 200px;
+  width: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_text {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.app_pic {
+  position: relative;
+}
+
+.app_pic img {
+  width: 190px;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity .6s;
+
+}
+
+.app_pic img:hover {
+  width: 210px;
+  height: 210%;
+  opacity: 1;
+  transform: rotateX(2s);
+}
+
+
+/* ------access----------------------------------- */
+
+.access {
+  margin-top: 120px;
+}
+
+.access h1 {
+  background: hsl(39, 100%, 68%, 0.8);
+}
+
+.access_list {
+  margin: 40px auto;
+  font-size: 12px;
+}
+
+tr {
+  padding: 30px;
+}
+
+
+
+
+/* -----------レスポンシブ---------------- */
+
+@media(min-width:600px) {
+
+  .pc_menu {
+    display: flex;
+    margin-left: auto;
+
+  }
+
+  .pc_menu_logo img {
+    width: 8em;
+    height: 6em;
+    object-fit: contain;
+  }
+
+  .pc_menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pc_menu a {
+    display: block;
+    width: 7.5em;
+    line-height: 6em;
+    text-align: center;
+    font-weight: bold;
+    color: #f2f2f2;
+  }
+
+  .pc_menu a:hover {
+    background: #f2f2f2;
+  }
+
+  .sp_menu {
+    display: none;
+  }
+
+  /* body------------------------------ */
+
+  .main {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ---------- */
+
+
+
+
+
+  /* ======= */
+
+  .hp_layer {
+    font-size: 2em;
+  }
+
+  .hp_layer h1 {
+    font-size: 2em;
+    
+  }
+
+  .top_text {
+    margin: 150px;
+  }
+
+  .top_text h1 {
+    font-size: 2.5em;
+
+  }
+
+  .top_text p {
+    font-size: 1.2em;
+
+
+  }
+
+  .about {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about_pic {
+    margin-top: 40px;
+  }
+
+
+  .fade_in {
+    width: 100%;
+  }
+
+
+  .about_info {
+    display: block;
+    height: 250px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about_info h1 {
+    background: #fff;
+  }
+
+  .about_info_text p {
+    font-size: 17px;
+  }
+
+  .about_pic {
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+    position: static;
+    perspective: 900px;
+    /* 飛び出る */
+    margin-top: 100px;
+    /* positionで聞かなくなったheightを調整 */
+  }
+
+  .about_pic_list {
+    height: auto;
+    width: 400px;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    display: block;
+  }
+
+  #item_a {
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 250px;
+    height: 200px;
+    line-height: 200px;
+    list-style: none;
+    font-size: 5em;
+    text-align: center;
+    color: #fff;
+    opacity: 0.95;
+    border-radius: 0.2em;
+
+    /* それぞれのカラー */
+    transform: rotateY(0deg) translateZ(250px);
+    background: #ed1c24;
+  }
+
+  #item_b {
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 250px;
+    height: 200px;
+    list-style: none;
+    font-size: 5em;
+    text-align: center;
+    color: #ffff;
+    opacity: 0.95;
+    border-radius: 0.2em;
+
+    transform: rotateY(60deg) translateZ(250px);
+    background: blue;
+  }
+
+  #item_c {
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 250px;
+    height: 200px;
+    list-style: none;
+    font-size: 5em;
+    text-align: center;
+    color: #fff;
+    opacity: 0.95;
+    border-radius: 0.2em;
+
+    transform: rotateY(180deg) translateZ(250px);
+    background: coral;
+  }
+
+  #item_d {
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 250px;
+    height: 200px;
+    list-style: none;
+    font-size: 5em;
+    text-align: center;
+    color: #fff;
+    opacity: 0.95;
+    border-radius: 0.2em;
+
+    transform: rotateY(300deg) translateZ(250px);
+    background: yellowgreen;
+  }
+
+
+
+
+  .top_text {
+    margin-bottom: 3em;
+  }
+
+  /* cource------------- */
+
+  .course {
+    margin-top: 70px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .course>h1 {
+    background: #fff;
+  }
+
+  .course_text {
+    font-size: 16px;
+    margin-bottom: 90px;
+  }
+
+  .course_page {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* .course_page:nth-child(even) {
+    flex-direction: row-reverse;
+  } */
+
+  .course_info {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+
+  .course_info p {
+    text-align: center;
+    font-size: 14px;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .course_info h1 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 30px auto;
+    width: 100%;
+  }
+
+  .course_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .course_pic {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .course_pic img {
+    width: 100%;
+    /* margin: 0 auto; */
+  }
+
+  /* 
+  .course_container section:nth-child(even) {
+    flex-direction: row-reverse;
+  } */
+
+  /* news-------------------------- */
+  .news {
+    margin-top: 80px;
+    margin: 0 auto;
+  }
+
+  .news_title {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 120px;
+  }
+
+  .news_info {
+    margin-bottom: 30px;
+    margin: 0;
+  }
+
+  .news_pic_1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .news_pic img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 8px 0 darkgray;
+
+    object-fit: contain;
+  }
+
+  .title {
+    width: 70%;
+    height: 150px;
+
+    margin-bottom: 30px;
+    border-radius: 16px;
+  }
+
+  .news_info_list {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .list {
+    line-height: 40px;
+  }
+
+  .title p {
+    line-height: 37px;
+    font-size: 14px;
+  }
+
+  .title {
+    line-height: 37px;
+    font-size: 14px;
+  }
+
+  .btn {
+    margin: 20px auto;
+    padding: 5px 10px;
+    display: block;
+    box-shadow: 0 4px 4px 0 darkgray;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .app {
+    width: 100%;
+    height: 300px;
+    display: block;
+    background: darkorange;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .app_text {
+    padding: 50px;
+    font-size: 18px;
+  }
+
+  .app_pic img {
+    width: 280px;
+    height: 280%;
+    opacity: 0.7;
+    transition: opacity .6s;
+  }
+
+  .app_pic img:hover {
+    width: 310px;
+    height: 310%;
+    opacity: 1;
+    transform: rotateX(2s);
+  }
+
+
+  /* --------access------------------------------ */
+
+  .access {
+    width: 100%;
+    height: 400px;
+    margin: 80px auto;
+  }
+
+  .access h1 {
+    text-align: center;
+    margin: 0 auto;
+    margin: 80px;
+    background: #fff;
+  }
+
+  .access_contents {
+    width: 100%;
+    padding-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+  .map iframe {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .access_zip {
+    width: 60%;
+
+
+  }
+
+  .access_list {
+    width: 100%;
+    font-size: 14px;
+
+  }
+
+  .access_list table {
+    margin: 0 auto;
+
+  }
+
+  .access_list th {
+    width: 200px;
+  }
+
+  /* ------------contact---------------------------------- */
+
+
+
+
+
+
+}
