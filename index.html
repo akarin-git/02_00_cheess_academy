@@ -35,12 +35,18 @@
 <body>
     <header class="top" id="top">
 
-        <div class='box'>
-            <div class='wave -one'></div>
-            <div class='wave -two'></div>
-            <div class='wave -three'></div>
-            <div class='wave_title'>change world!</div>
+
+    <!-- ----------wave------------------------------ -->
+
+        <div class="box">
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+            <div class="wave_title">change world!</div>
         </div>
+
+
+        <!-- -------fadein-------------------------------- -->
 
         <div class="fade_in fade_in_up box">
         <div class="hp_layer">
@@ -60,10 +66,8 @@
         </div>
      
 
-        <!-- ---------------pcmenu--------------------------- -->
+        <!-- ---------------pcmenu-------------------------- -->
            
-            
-        
 
             <div class="pc_menu">
                 <div class="pc_menu_logo">
@@ -73,11 +77,11 @@
                 <div class="pc_menu_list">
                     <nav>
                         <ul>
-                            <li><a href="#">ABOUT</a> </li>
-                            <li><a href="#">COURSE</a> </li>
-                            <li><a href="#">NEWS</a> </li>
-                            <li><a href="#">ACCESS</a> </li>
-                            <li><a href="#">CONTACT</a> </li>
+                            <li><a href="#about">ABOUT</a> </li>
+                            <li><a href="#course">COURSE</a> </li>
+                            <li><a href="#news">NEWS</a> </li>
+                            <li><a href="#access">ACCESS</a> </li>
+                            <li><a href="#contact">CONTACT</a> </li>
                             
                         </ul>
                     </nav>
@@ -89,31 +93,34 @@
             </div>
     </header>
 
-<!-- ---------------overlay--------------------------------- -->
+<!-- ---------------overlay--------------------------- -->
 
     <div class="overlay">
         <span class="material-icons" id="close">close</span>
         <nav>
             <ul>
-                <li>ABOUT</li>
-                <li>COURSE</li>
-                <li>NEWS</li>
-                <li>ACCESS</li>
-                <li>CONTACT</li>
+                <li>
+                    <a href="#about">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#course">COURSE</a>
+                </li>
+                <li>
+                    <a href="#news">NEWS</a>
+                 </li>
+                <li>
+                    <a href="#news">ACCESS</a>
+                 </li>
+                <li>
+                    <a href="#news">CONTACT</a>
+                    </li>
             </ul>
         </nav>
     </div>
 
-<!-- -----------scroll top---------------------------------- -->
-    <!-- <div class="for-scroll"></div>
-    
-    <div id="js-scroll-top" class="scroll-top"><a href="#top">TOP</a></div>
-
-    <main class="container"> -->
-
 <!-------- about------------------------------------- -->
 
-        <section class="about">
+        <section class="about" id="about">
             
             <div class="about_info">
                 <h1 class="about_info_title">About</h1>
@@ -141,8 +148,10 @@
 
             
                 
-            <!-- course----------- -->
-<section class="course">
+            <!---------------------- course------------------------------ -->
+
+
+<section class="course" id="course">
     <h1>Course</h1>
     <div class="course_text">
         未経験からでもスタートができるよう，<br>カリキュラムは多くの専門家や現役チーズ職人のアドバイスのもと，作られました．
@@ -193,11 +202,9 @@
     </section>
     
     
-    
-    
-<!-- ---------news----------------- --> 
+<!-- -----------------news--------------------------------------------- --> 
 
-         <section class="news">
+         <section class="news" id="news">
             <h1 class="news_title">NEWS</h1>
 
             <section class="news_page">
@@ -266,11 +273,9 @@
             </div>
          </section>
  
-                       
-        
-<!-- -------access-------------------------- -->
+<!-- ------------------------------access----------------------------------------- -->
                    
-        <section class="access">
+        <section class="access" id="access">
             <h1>Access</h1>
             <div class="access_contents">
                 <div class="map">
@@ -296,13 +301,11 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
                     
-   <!---------contact--------------------------          -->
+   <!---------contact-------------------------- ----------------------         -->
           
-   <section class="contact">
+   <section class="contact" id="contact">
        
 
    <h1>Contact</h1>
@@ -369,18 +372,25 @@
             </tr>
         </table>
 
+        <div class="submit">
+        <input type="submit" value="送信">
+        </div>
+
     </div>
-
-
    </section>
-  
-        
-
-
-
 </main>
+
+<!-- ---------------footer----------------------------------------------------- -->
+
 <footer>
-    </footer>
+
+<div>
+    <p>
+        copyrights 2016-2018 Cheeese Academy Fukuoka All RIghts Reserved.
+    </p>
+</div>
+
+ </footer>
 
 
 

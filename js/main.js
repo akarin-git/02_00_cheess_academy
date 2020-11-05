@@ -7,9 +7,7 @@
   spinner.classList.add('loaded');
 }
 
-
-
-
+  // ハンバーガー
   const open = document.getElementById('open');
   const overlay = document.querySelector('.overlay');
   const close = document.getElementById('close');
@@ -24,7 +22,7 @@
     overlay.classList.remove('show');
     open.classList.remove('hide');
   });
-  // fadein----------------
+  // フェードイン----------------
   
   let fadeInTarget = document.querySelectorAll('.fade_in');
   window.addEventListener('scroll', () => {
@@ -44,7 +42,7 @@
     }
   })
 
-  // ----------about slide------------------------------------
+  
    
 
 

@@ -41,6 +41,7 @@ body {
   background-color: #fff;
   border-radius: 100%;
   animation: sk-scaleout 1.0s infinite ease-in-out;
+  /* スライドアニメーション */
 }
 
 /* ローディングアニメーション */
@@ -98,6 +99,7 @@ header {
 }
 
 
+
 .box {
   width: 800px;
   height: 300px;
@@ -107,6 +109,7 @@ header {
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  /* 3dっぽく */
 }
 
 .hp_layer {
@@ -288,13 +291,6 @@ header {
 .overlay.show li:nth-child(5) {
   transition-delay: .5s;
 }
-
-
-/* ---------scroll top---------------------------------- */
-
-
-
-
 /*--------- main-------------------------------- */
 
 
@@ -351,7 +347,6 @@ header {
   width: 100%;
   position: absolute;
   transform-style: preserve-3d;
-  /*   transform-style: flat; */
   transition: transform 1s;
 }
 
@@ -366,10 +361,10 @@ header {
   font-size: 5em;
   text-align: center;
   color: #FFF;
-  /*   opacity: 0.95; */
+
   border-radius: 10px;
   transform: translateZ(0px);
-  /*   z-index: -1 */
+ 
 }
 
 .fade_in {
@@ -541,7 +536,7 @@ header {
 }
 
 .course_info {
-  text-align: center;
+  
   font-size: 16px;
 }
 
@@ -578,7 +573,7 @@ header {
 }
 
 .news_pic {
-  width: 60%;
+  width: 75%;
 
   /* height: 400px; */
   display: flex;
@@ -689,7 +684,81 @@ header {
   line-height: 24px;
 }
 
+/* -------contact-------------------- */
 
+.contact {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.contact h1{
+  margin-top: 90px;
+}
+.contact p{
+  margin-bottom: 32px;
+}
+.contact_text{
+  margin-bottom: 90px;
+}
+
+.contact_group table {
+  width: 60%;
+  text-align: left;
+  margin: 46px auto;
+}
+
+input {
+  border: 1px solid rgb(204, 201, 201);
+  line-height: 14px;
+  padding: 5px;
+}
+
+
+
+textarea {
+  width: 60%;
+  border: 1px solid rgb(204, 201, 201);
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+
+.submit input {
+  appearance: none;
+  border-radius: 0;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  width: 300px;
+  background: hsl(49, 100%, 50%);
+  color: #fff;
+  font-weight: bold;
+  margin: 5px 10px;
+  padding: 20px 15px;
+}
+
+
+/* ----------footer---------------- */
+
+footer{
+  width: 100%;
+  height: 100px;
+  
+  text-align: center;
+  background: rgb(73, 73, 73);
+}
+
+footer p {
+  line-height: 20px;
+  font-size: 20px;
+  color: rgb(212, 209, 209);
+  padding-top: 32px;
+}
 
 
 
@@ -727,6 +796,7 @@ header {
 
   .pc_menu a:hover {
     background: #f2f2f2;
+    color: dimgray;
   }
 
   .sp_menu {
@@ -748,13 +818,6 @@ header {
     align-items: center;
   }
 
-  /* ---------- */
-
-
-
-
-
-  /* ======= */
 
   .hp_layer {
     font-size: 2em;
@@ -782,6 +845,9 @@ header {
     padding: 0;
     font-size: 1.4em;
   }
+
+
+  /* about---------------------- */
 
   .about {
     text-align: center;
@@ -1155,19 +1221,44 @@ header {
     margin: 0 auto;
   }
 
-  .contact_group table{
-    width: 90%;
+  .contact_group table {
+    width: 70%;
     text-align: left;
     margin: 46px auto;
   }
 
-  label {
-
+  input {
+    border: 1px solid rgb(204, 201, 201);
+    line-height: 14px;
+    padding: 5px;
   }
- 
 
 
-textarea {
-  width: 60%;
-  border: 1px solid rgb(204, 201, 201);
+
+  textarea {
+    width: 60%;
+    border: 1px solid rgb(204, 201, 201);
+  }
+
+  .submit {
+    display: flex;
+    justify-content: center;
+  }
+
+  .submit input {
+    appearance: none;
+    border-radius: 0;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    width: 300px;
+    background: hsl(49, 100%, 50%);
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 10px;
+    padding: 20px 15px;
+  }
+
 }
