@@ -115,13 +115,16 @@ header {
 
 .hp_layer h1 {
   font-size: 2em;
-  height: 400px;
+  line-height: 1.5em;
+  height: 250px;
 }
 
 .top_text {
   background: url(../img/mainbg.png);
   background-size: cover;
   margin: 0 auto;
+  height: 300px;
+  width: 100%;
   color: #fff;
 }
 
@@ -383,8 +386,8 @@ header {
 }
 
 .about_info_title {
-  background: hsl(39, 100%, 68%, 0.8);
   margin-top: 140px;
+
 }
 
 .about_pic {
@@ -496,12 +499,9 @@ header {
 
 /* ----------course----------------------- */
 
-.course>h1 {
-  background: hsl(39, 100%, 68%, 0.8);
-}
-
-section .course {
+.course {
   margin: 0 auto;
+  text-align: center;
 }
 
 .course_text {
@@ -511,8 +511,7 @@ section .course {
 
 
 .course_container {
-  width: 90%;
-  height: 150px;
+  width: 100%;
 }
 
 .course_info h1 {
@@ -521,25 +520,29 @@ section .course {
   text-align: center;
 }
 
-.course_container {
+.course_page {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
-  margin: 10px auto;
+  flex-direction: column;
+}
+
+.course_pic {
+  margin: 0 auto;
 }
 
 .course_pic img {
-  width: 200px;
+  width: 60%;
   object-fit: contain;
-
 }
 
 .course_info {
   text-align: center;
   font-size: 16px;
-  width: 50%;
 }
 
 .course_info_text h2 {
@@ -547,7 +550,6 @@ section .course {
 }
 
 .course_info p {
-
   font-size: 14px;
   text-align: center;
 }
@@ -557,46 +559,61 @@ section .course {
 }
 
 /* -----------news------------------------------- */
-.news_title {
-  background: hsl(39, 100%, 68%, 0.8);
+
+.bg-skew {
+  background: tomato;
+  -webkit-transform: skew(0deg, -10deg);
+  transform: skew(0deg, -10deg);
+  padding: 60px 0;
+  margin-top: 100px;
+}
+
+.news h1 {
+  text-align: center;
 }
 
 .news_info {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  width: 100%;
 }
 
 .news_pic {
   width: 60%;
-  height: 400px;
+
+  /* height: 400px; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
+  margin: 10px;
 }
 
 .news_pic img {
-  width: 90%;
+  width: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  margin-top: 40px;
   border-radius: 16px;
   box-shadow: 0 8px 8px 0 darkgray;
 }
 
-.news_info_list {
-  width: 40%;
-  height: 400px;
+.news_info_text {
+  width: 50%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  margin: 0 auto;
 }
 
 .btn {
   margin: 20px auto;
   padding: 5px 10px;
   display: block;
+  width: 200px;
+  text-align: center;
   box-shadow: 0 4px 4px 0 darkgray;
 }
 
@@ -641,21 +658,38 @@ section .course {
 /* ------access----------------------------------- */
 
 .access {
-  margin-top: 120px;
+  background: #fafafa;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 
-.access h1 {
-  background: hsl(39, 100%, 68%, 0.8);
+.access p {
+  margin: 0 auto;
+  margin-bottom: 64px;
+
+}
+
+.access_zip {
+  width: 100%;
 }
 
 .access_list {
-  margin: 40px auto;
-  font-size: 12px;
+  margin: 0 auto;
+  margin-top: 64px;
+  margin-bottom: 80px;
 }
 
-tr {
-  padding: 30px;
+
+
+.access_zip {
+  line-height: 24px;
 }
+
+
 
 
 
@@ -724,26 +758,29 @@ tr {
 
   .hp_layer {
     font-size: 2em;
+
   }
 
   .hp_layer h1 {
     font-size: 2em;
-    
+
   }
 
   .top_text {
-    margin: 150px;
+    height: 500px;
+    padding-top: 100px;
+    margin-bottom: 200px;
+    margin-top: 150px;
   }
 
   .top_text h1 {
-    font-size: 2.5em;
+    font-size: 3em;
 
   }
 
   .top_text p {
-    font-size: 1.2em;
-
-
+    padding: 0;
+    font-size: 1.4em;
   }
 
   .about {
@@ -879,72 +916,69 @@ tr {
   /* cource------------- */
 
   .course {
-    margin-top: 70px;
+    margin-top: 80px;
     text-align: center;
-    margin: 0 auto;
-  }
-
-  .course>h1 {
-    background: #fff;
+    padding: 0;
   }
 
   .course_text {
-    font-size: 16px;
-    margin-bottom: 90px;
+    font-size: 21px;
   }
 
-  .course_page {
-    margin: 0 auto;
-    width: 100%;
+  .course_container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
-
-  /* .course_page:nth-child(even) {
-    flex-direction: row-reverse;
-  } */
 
   .course_info {
-    margin: 0 auto;
     width: 50%;
-  }
-
-
-  .course_info p {
     text-align: center;
-    font-size: 14px;
-    width: 85%;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .course_info h1 {
-    font-weight: bold;
-    font-size: 18px;
-    margin: 30px auto;
-    width: 100%;
+    font-size: 21px;
   }
+
+  .course_info p {
+    font-size: 18px;
+  }
+
+  .course_pic {
+
+    width: 50%;
+    object-fit: contain;
+
+  }
+
+  .course_pic img {
+    width: 100%;
+    object-fit: contain;
+
+  }
+
+  .course_container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+
+
+
+
+  /* 
 
   .course_container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto;
-    margin: 10px auto;
-  }
+    /* height: auto; 
+  }*/
 
-  .course_pic {
-    width: 50%;
-    margin: 0 auto;
-  }
 
-  .course_pic img {
-    width: 100%;
-    /* margin: 0 auto; */
-  }
 
-  /* 
-  .course_container section:nth-child(even) {
-    flex-direction: row-reverse;
-  } */
 
   /* news-------------------------- */
   .news {
@@ -957,24 +991,42 @@ tr {
     text-align: center;
     margin: 0 auto;
     background: #fff;
-    margin-top: 120px;
+    margin-top: 50px;
+  }
+
+  .news_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   .news_info {
-    margin-bottom: 30px;
-    margin: 0;
-  }
-
-  .news_pic_1 {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+  }
+
+  .news_info_text {
+    height: 200px;
+    width: 350px;
+    text-align: left;
+  }
+
+  .news_info_text h2 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .news_info_text p {
+    font-size: 14px;
   }
 
   .news_pic img {
-    width: 100%;
+    width: 80%;
     border-radius: 16px;
     box-shadow: 0 8px 8px 0 darkgray;
 
@@ -989,20 +1041,6 @@ tr {
     border-radius: 16px;
   }
 
-  .news_info_list {
-    width: 40%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 40px;
-  }
-
-  .list {
-    line-height: 40px;
-  }
-
   .title p {
     line-height: 37px;
     font-size: 14px;
@@ -1014,7 +1052,9 @@ tr {
   }
 
   .btn {
-    margin: 20px auto;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 60px;
     padding: 5px 10px;
     display: block;
     box-shadow: 0 4px 4px 0 darkgray;
@@ -1060,58 +1100,74 @@ tr {
 
   .access {
     width: 100%;
-    height: 400px;
-    margin: 80px auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .map {
+    width: 100%;
   }
 
   .access h1 {
     text-align: center;
     margin: 0 auto;
-    margin: 80px;
-    background: #fff;
+    margin-top: 64px;
+    margin-bottom: 24px;
   }
 
   .access_contents {
     width: 100%;
-    padding-left: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+    flex-direction: column;
   }
 
   .map iframe {
-    display: block;
     margin: 0 auto;
   }
 
-  .access_zip {
-    width: 60%;
-
-
-  }
+  .access_zip {}
 
   .access_list {
     width: 100%;
-    font-size: 14px;
+    font-size: 21px;
 
   }
 
   .access_list table {
     margin: 0 auto;
-
+    text-align: left;
+    padding: 0;
+    border-collapse: separate;
+    border-spacing: 48px 24px;
   }
 
   .access_list th {
     width: 200px;
+    font-weight: 100;
   }
 
-  /* ------------contact---------------------------------- */
+  /* ------------contact---------------------------------- 
+  */
+
+  .contact {
+    margin: 0 auto;
+  }
+
+  .contact_group table{
+    width: 90%;
+    text-align: left;
+    margin: 46px auto;
+  }
+
+  label {
+
+  }
+ 
 
 
-
-
-
-
+textarea {
+  width: 60%;
+  border: 1px solid rgb(204, 201, 201);
 }
