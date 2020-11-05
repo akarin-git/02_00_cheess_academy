@@ -2,7 +2,7 @@
 
 ##プロダクトの紹介
 -チーズアカデミーの紹介ページ
-（https://akarin-git.github.io/02_02_cheess_academy/）
+https://akarin-git.github.io/02_02_cheess_academy/
 
 
 ##工夫した点
