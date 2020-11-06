@@ -149,8 +149,10 @@ header {
   margin-left: -250px;
   margin-top: -250px;
   transform-origin: 50% 48%;
+  /* 動き */
   border-radius: 43%;
   animation: drift 3000ms infinite linear;
+  /* 動き */
 }
 
 .wave.-three {
@@ -163,6 +165,7 @@ header {
   background: yellow;
 }
 
+/* ３つのwaveが入っているボックス */
 .box:after {
   content: '';
   display: block;
@@ -200,11 +203,12 @@ header {
 
   from {
     transform: rotate(360deg);
+    /* 回る */
   }
 }
 
 
-/* ---------------🍔menu--------------------------- */
+/* ハンバーガー */
 
 .sp_menu {
   margin-left: auto;
@@ -226,7 +230,7 @@ header {
 
 
 
-/* -------------overlay 🍔------------------ */
+/* Overlay */
 
 .overlay {
   position: fixed;
@@ -291,14 +295,15 @@ header {
 .overlay.show li:nth-child(5) {
   transition-delay: .5s;
 }
-/*--------- main-------------------------------- */
+
+/* MAIN */
 
 
 .pc_menu {
   display: none;
 }
 
-/* fade-in--------------------------------- */
+/* FADEIN */
 
 .fade_in {
   opacity: 0;
@@ -324,7 +329,7 @@ header {
 }
 
 
-/* ----------------about----------------------------- */
+/* ABOUT */
 
 .about {
   display: block;
@@ -364,7 +369,7 @@ header {
 
   border-radius: 10px;
   transform: translateZ(0px);
- 
+
 }
 
 .fade_in {
@@ -492,7 +497,7 @@ header {
 }
 
 
-/* ----------course----------------------- */
+/* COURSE */
 
 .course {
   margin: 0 auto;
@@ -536,7 +541,7 @@ header {
 }
 
 .course_info {
-  
+
   font-size: 16px;
 }
 
@@ -553,7 +558,7 @@ header {
   margin-bottom: 100px;
 }
 
-/* -----------news------------------------------- */
+/* NEWS */
 
 .bg-skew {
   background: tomato;
@@ -649,8 +654,7 @@ header {
   transform: rotateX(2s);
 }
 
-
-/* ------access----------------------------------- */
+/* ACCESS */
 
 .access {
   background: #fafafa;
@@ -684,20 +688,23 @@ header {
   line-height: 24px;
 }
 
-/* -------contact-------------------- */
+/* CONTACT */
 
 .contact {
   text-align: center;
   width: 100%;
   margin: 0 auto;
 }
-.contact h1{
+
+.contact h1 {
   margin-top: 90px;
 }
-.contact p{
+
+.contact p {
   margin-bottom: 32px;
 }
-.contact_text{
+
+.contact_text {
   margin-bottom: 90px;
 }
 
@@ -743,12 +750,12 @@ textarea {
 }
 
 
-/* ----------footer---------------- */
+/* FOOTER */
 
-footer{
+footer {
   width: 100%;
   height: 100px;
-  
+
   text-align: center;
   background: rgb(73, 73, 73);
 }
@@ -803,7 +810,7 @@ footer p {
     display: none;
   }
 
-  /* body------------------------------ */
+  /* BODY */
 
   .main {
     width: 100%;
@@ -847,7 +854,7 @@ footer p {
   }
 
 
-  /* about---------------------- */
+  /* ABOUT */
 
   .about {
     text-align: center;
@@ -874,12 +881,8 @@ footer p {
     width: 100%;
   }
 
-  .about_info h1 {
-    background: #fff;
-  }
-
-  .about_info_text p {
-    font-size: 17px;
+  .about_info_text {
+    font-size: 21px;
   }
 
   .about_pic {
@@ -979,7 +982,7 @@ footer p {
     margin-bottom: 3em;
   }
 
-  /* cource------------- */
+  /* CORSE */
 
   .course {
     margin-top: 80px;
@@ -988,7 +991,7 @@ footer p {
   }
 
   .course_text {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .course_container {
@@ -996,7 +999,10 @@ footer p {
     justify-content: center;
     align-items: center;
     height: 100%;
+
   }
+
+  /* .course_page section {} */
 
   .course_info {
     width: 50%;
@@ -1025,9 +1031,10 @@ footer p {
 
   }
 
-  .course_container:nth-child(even) {
+  /* 
+  .course_container section:nth-child(even) {
     flex-direction: row-reverse;
-  }
+  } */
 
 
 
@@ -1231,12 +1238,14 @@ footer p {
     border: 1px solid rgb(204, 201, 201);
     line-height: 14px;
     padding: 5px;
+    
   }
 
 
 
+
   textarea {
-    width: 60%;
+    width: 80%;
     border: 1px solid rgb(204, 201, 201);
   }
 
